@@ -56,11 +56,18 @@ function changeVal() {
 function submit(inp){
     ans = `${num1} ${oprSigns[operator]} ${num2}`
     if(eval(ans)==inp.previousElementSibling.value){
-        alert("correct")
+        Swal.fire(
+            "Correct",
+            'Your answer is correct',
+            'success'
+        )
         inp.previousElementSibling.value = ""
     }else{
-        alert("wrong")
-        inp.previousElementSibling.value = ""
+        Swal.fire(
+            "Wrong",
+            'The answer you entered is wrong',
+            'error'
+        )
     }
     changeVal()
 }
