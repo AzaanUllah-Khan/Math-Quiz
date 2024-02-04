@@ -19,31 +19,31 @@
             <div>
                 <button id="lvlBtn">Select Level</button>
                 <ul id="lvl">
-                    <li>Beginner</li>
-                    <li>Intermediate</li>
-                    <li>Advanced</li>
+                    <li onclick="changeLvl('beginner')">Beginner</li>
+                    <li onclick="changeLvl('int')">Intermediate</li>
+                    <li onclick="changeLvl('adv')">Advanced</li>
                 </ul>
             </div>
             <div>
                 <button id="oprBtn">Select Operator</button>
                 <ul id="opr">
-                    <li>Addition</li>
-                    <li>Subtraction</li>
-                    <li>Multiplication</li>
-                    <li>Division</li>
+                    <li onclick="changeOpr('Add')">Addition</li>
+                    <li onclick="changeOpr('Sub')">Subtraction</li>
+                    <li onclick="changeOpr('Multiply')">Multiplication</li>
+                    <li onclick="changeOpr('Divide')">Division</li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container">
         <div class="game">
-            <h2>5</h2>
-            <h2>*</h2>
-            <h2>3</h2>
+            <h2 id="num1">5</h2>
+            <h2 id="operator">*</h2>
+            <h2 id="num2">3</h2>
         </div>
         <div class="input">
             <input type="text" placeholder="Enter Your Answer">
-            <i class="fa fa-check"></i>
+            <i class="fa fa-check" onclick="submit(this)"></i>
         </div>
     </div>
     <script src="script.js"></script>
