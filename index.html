@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <header style="background-color: #222;padding: 10px;" onclick="this.style.display = 'none'">
+        <h1 style="font-size: 14px; font-weight: lighter; color: whitesmoke;">Current Level : <span id="lvl" style="color: white;"></span></h1>
+    </header>
     <nav>
         <h1>Math Game</h1>
         <div class="settings">
@@ -20,8 +23,8 @@
                 <button id="lvlBtn">Select Level</button>
                 <ul id="lvl">
                     <li onclick="changeLvl('beginner')">Beginner</li>
-                    <li onclick="changeLvl('int')">Intermediate</li>
-                    <li onclick="changeLvl('adv')">Advanced</li>
+                    <li onclick="changeLvl('intermediate')">Intermediate</li>
+                    <li onclick="changeLvl('advanced')">Advanced</li>
                 </ul>
             </div>
             <div>

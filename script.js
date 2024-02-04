@@ -3,6 +3,7 @@ var operator = "Add";
 var ans;
 var num1;
 var num2;
+document.getElementById("lvl").innerText = level.toUpperCase()
 
 var oprSigns = {
     Add: "+",
@@ -14,12 +15,11 @@ var oprSigns = {
 document.getElementById("operator").innerText = oprSigns[operator]
 function changeLvl(e) {
     level = e
-    console.log(level);
+    document.getElementById("lvl").innerText = level.toUpperCase()
     changeVal()
 }
 function changeOpr(e) {
     operator = e
-    console.log(operator);
     document.getElementById("operator").innerText = oprSigns[operator]
     changeVal()
 }
@@ -33,19 +33,19 @@ function changeVal() {
         num1 = Math.ceil(Math.random()*15)
         num2 = Math.ceil(Math.random()*15)
     }
-    else if(level === "int" && operator == "Add" || operator == "Sub"){
+    else if(level === "intermediate" && operator == "Add" || operator == "Sub"){
         num1 = Math.ceil(Math.random()*120)+30
         num2 = Math.ceil(Math.random()*120)+30
     }
-    else if(level === "int" && operator == "Multiply" || operator == "Divide"){
+    else if(level === "intermediate" && operator == "Multiply" || operator == "Divide"){
         num1 = Math.ceil(Math.random()*25)+10
         num2 = Math.ceil(Math.random()*25)+10
     }
-    else if(level === "adv" && operator == "Add" || operator == "Sub"){
+    else if(level === "advanced" && operator == "Add" || operator == "Sub"){
         num1 = Math.ceil(Math.random()*300)+69
         num2 = Math.ceil(Math.random()*300)+69
     }
-    else if(level === "adv" && operator == "Multiply" || operator == "Divide"){
+    else if(level === "advanced" && operator == "Multiply" || operator == "Divide"){
         num1 = Math.ceil(Math.random()*50)+20
         num2 = Math.ceil(Math.random()*50)+20
     }

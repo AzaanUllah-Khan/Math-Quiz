@@ -125,6 +125,9 @@ nav .settings ul li:hover{
     nav .settings ul{
         transform-origin: top;
     }
+    header h1{
+        text-align: center;
+    }
 }
 @media screen and (max-width: 280px) {
     .container .input{
