@@ -36,6 +36,7 @@ nav .settings button{
     border: none;
     outline: none;
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 nav .settings ul{
     position: absolute;
@@ -46,12 +47,73 @@ nav .settings ul{
     padding: 5px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(0);
+    transition: .2s ease-in-out;
+    transform-origin: top right;
+}
+nav .settings button:hover + ul,nav .settings ul:hover{
+    transform: scale(1);
 }
 nav .settings ul li{
+    cursor: pointer;
     color: white;
     font-size: 14px;
     padding: 7px 12px;
     margin-bottom: 3px;
     border-radius: 30px;
     background: linear-gradient(to bottom, rgba(47, 47, 47, 0.8),rgba(34, 34, 34,.8), rgba(7, 7, 7, 0.8));
+}
+nav .settings ul li:hover{
+    background: linear-gradient(to bottom, rgb(47, 47, 47),rgb(34, 34, 34), rgb(7, 7, 7));
+}
+.container{
+    margin: 100px auto;
+    padding: 35px 10px;
+    max-width: 500px;
+    min-width: 370px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+.container .game{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+.container .game h2{
+    font-size: 24px;
+}
+.container .game h2:nth-child(2){
+    font-weight: normal;
+    font-size: 20px;
+}
+.container .input{
+    margin: 20px auto 0;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: royalblue;
+    border-radius: 10px;
+}
+.container .input input{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    width: 100%;
+}
+.container .input input::placeholder{
+    font-size: 14px;
+}
+.container .input i{
+    width: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
