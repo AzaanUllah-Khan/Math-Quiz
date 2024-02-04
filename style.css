@@ -9,10 +9,6 @@
 body{
     background-color: royalblue;
 }
-.container{
-    width: 100%;
-    padding: 10px;
-}
 nav{
     background-color: orangered;
     padding: 10px;
@@ -21,6 +17,10 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+nav h1{
+    color: white;
+    font-size :25px;
 }
 nav .settings{
     display: flex;
@@ -67,10 +67,10 @@ nav .settings ul li:hover{
     background: linear-gradient(to bottom, rgb(47, 47, 47),rgb(34, 34, 34), rgb(7, 7, 7));
 }
 .container{
-    margin: 100px auto;
+    margin: 75px auto;
     padding: 35px 10px;
     max-width: 500px;
-    min-width: 370px;
+    min-width: 200px;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 20px;
 }
@@ -116,4 +116,18 @@ nav .settings ul li:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media screen and (max-width: 500px) {
+    nav{
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav .settings ul{
+        transform-origin: top;
+    }
+}
+@media screen and (max-width: 280px) {
+    .container .input{
+        width: 85%;
+    }
 }
