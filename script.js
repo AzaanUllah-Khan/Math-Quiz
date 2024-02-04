@@ -25,51 +25,55 @@ function changeOpr(e) {
 }
 
 function changeVal() {
-    if(level === "beginner" && operator == "Add" || operator == "Sub"){
-        num2 = Math.ceil(Math.random()*50)
-        num1 = Math.ceil(Math.random()*50)+num2
+    if (level === "beginner" && operator == "Add" || operator == "Sub") {
+        num2 = Math.ceil(Math.random() * 50)
+        num1 = Math.ceil(Math.random() * 50) + num2
     }
-    else if(level === "beginner" && operator == "Multiply" || operator == "Divide"){
-        num1 = Math.ceil(Math.random()*15)
-        num2 = Math.ceil(Math.random()*15)
+    else if (level === "beginner" && operator == "Multiply" || operator == "Divide") {
+        num1 = Math.ceil(Math.random() * 15)
+        num2 = Math.ceil(Math.random() * 15)
     }
-    else if(level === "intermediate" && operator == "Add" || operator == "Sub"){
-        num1 = Math.ceil(Math.random()*120)+30
-        num2 = Math.ceil(Math.random()*120)+30
+    else if (level === "intermediate" && operator == "Add" || operator == "Sub") {
+        num1 = Math.ceil(Math.random() * 120) + 30
+        num2 = Math.ceil(Math.random() * 120) + 30
     }
-    else if(level === "intermediate" && operator == "Multiply" || operator == "Divide"){
-        num1 = Math.ceil(Math.random()*25)+10
-        num2 = Math.ceil(Math.random()*25)+10
+    else if (level === "intermediate" && operator == "Multiply" || operator == "Divide") {
+        num1 = Math.ceil(Math.random() * 25) + 10
+        num2 = Math.ceil(Math.random() * 25) + 10
     }
-    else if(level === "advanced" && operator == "Add" || operator == "Sub"){
-        num1 = Math.ceil(Math.random()*300)+69
-        num2 = Math.ceil(Math.random()*300)+69
+    else if (level === "advanced" && operator == "Add" || operator == "Sub") {
+        num1 = Math.ceil(Math.random() * 300) + 69
+        num2 = Math.ceil(Math.random() * 300) + 69
     }
-    else if(level === "advanced" && operator == "Multiply" || operator == "Divide"){
-        num1 = Math.ceil(Math.random()*50)+20
-        num2 = Math.ceil(Math.random()*50)+20
+    else if (level === "advanced" && operator == "Multiply" || operator == "Divide") {
+        num1 = Math.ceil(Math.random() * 50) + 20
+        num2 = Math.ceil(Math.random() * 50) + 20
     }
     document.getElementById("num1").innerText = num1
     document.getElementById("num2").innerText = num2
 }
 
-function submit(inp){
+function submit(inp) {
     ans = `${num1} ${oprSigns[operator]} ${num2}`
-    if(eval(ans)==inp.previousElementSibling.value){
+    if (eval(ans) == inp.previousElementSibling.value) {
         Swal.fire(
             "Correct",
             'Your answer is correct',
             'success'
-        )
+        ).then(()=>{
+            changeVal()
+        })
         inp.previousElementSibling.value = ""
-    }else{
+    } else {
         Swal.fire(
             "Wrong",
-            'The answer you entered is wrong',
+            `The answer you entered is wrong. the correct answer is ${eval(ans)}`,
             'error'
-        )
+        ).then(()=>{
+            changeVal()
+        })
+        inp.previousElementSibling.value = ""
     }
-    changeVal()
 }
 
 changeVal()
