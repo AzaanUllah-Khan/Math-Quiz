@@ -67,7 +67,7 @@ nav .settings ul li:hover{
     background: linear-gradient(to bottom, rgb(47, 47, 47),rgb(34, 34, 34), rgb(7, 7, 7));
 }
 .container{
-    margin: 75px auto;
+    margin: 75px auto 0;
     padding: 35px 10px;
     max-width: 500px;
     min-width: 200px;
