@@ -62,7 +62,7 @@ nav .settings ul li {
     padding: 7px 12px;
     margin-bottom: 3px;
     border-radius: 30px;
-    background: linear-gradient(to bottom, #027111, #0271fe);
+    background: linear-gradient(to bottom, #0271ee, #0271fe);
 }
 nav .settings ul li:hover {
     background: #0271ff;
